@@ -1,50 +1,99 @@
 <template>
   <div id="main" class="wrapper style3">
-						<div class="container medium">
-							<header class="major">
-								<h2>Technical Documents</h2>
-								<p>Complete the form to request access to the Technical Documents</p>
-							</header>
+    <div class="container medium">
+      <header class="major">
+        <h2>Technical Documents</h2>
+        <p>Complete the form to request access to the Technical Documents</p>
+      </header>
 
-							<!-- Content -->
-								<section id="content">
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall">
-												<input type="text" name="name" id="name" value="" placeholder="Name*" />
-											</div>
-                                            <div class="col-6 col-12-xsmall">
-												<input type="text" name="surname" id="surname" value="" placeholder="Surname*" />
-											</div>
-											<div class="col-12">
-												<input type="email" name="email" id="email" value="" placeholder="Email*" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="institution" id="institution" value="" placeholder="Institution*" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" id="message" placeholder="Enter your message*" rows="6"></textarea>
-											</div>
-                                            <p><i>The fields with an asterisk are required fields</i></p>
-											<div class="col-12">
-												<ul class="actions special">
-													<li><input type="submit" value="Request Access" class="primary" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</section>
-                            
-						</div>
-					</div>
+      <!-- Content -->
+      <section id="content">
+        <FormulateForm @submit="submitHandler" #default="{ hasErrors }">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <FormulateInput
+                type="text"
+                v-model="name"
+                id="name"
+                placeholder="Name*"
+                validation="required"
+              />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <FormulateInput
+                type="text"
+                v-model="surname"
+                id="surname"
+                placeholder="Surname*"
+                validation="required"
+              />
+            </div>
+            <div class="col-12">
+              <FormulateInput
+                type="email"
+                v-model="email"
+                id="email"
+                placeholder="Email*"
+                validation="required|email"
+              />
+            </div>
+            <div class="col-12">
+              <FormulateInput
+                type="text"
+                v-model="institution"
+                id="institution"
+                placeholder="Institution*"
+                validation="required"
+              />
+            </div>
+            <div class="col-12">
+              <textarea
+                v-model="message"
+                id="message"
+                placeholder="Enter why you need access*"
+                rows="6"
+                validation="required"
+              ></textarea>
+            </div>
+            <p><i>The fields with an asterisk are required fields</i></p>
+            <div class="col-12">
+              <ul class="actions special">
+                <li>
+                    <input type="submit" value="Request Access" class="primary" :disabled="hasErrors"  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </FormulateForm>
+        <p>Name: {{name}}, Email: {{email}}, Text: {{ message }}</p>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-
-}
+    data() {
+        return {
+            name: '',
+            surname: '',
+            email: '',
+            institution: '',
+            message: ''
+        }
+    },
+    methods: {
+        submitHandler() {
+            console.log('Email: ', this.email)
+            console.log('Name: ', this.name)
+            console.log('Surname: ', this.surname)
+            console.log('Institution: ', this.institution)
+            console.log('Message ', this.message)
+        }
+    }
+   
+};
 </script>
 
 <style>
-
 </style>

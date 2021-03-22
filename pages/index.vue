@@ -1,7 +1,7 @@
 <template>
   <main>
     <img src="~/assets/images/intro2.png" width="100%" />
-    <Nuxt />
+    
     
       <section class="wrapper style1 split">
         <div class="container">

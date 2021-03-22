@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@braid/vue-formulate": "^2.5.2",
     "@nuxtjs/axios": "^5.12.5",
     "aframe": "^1.2.0",
     "core-js": "^3.8.3",

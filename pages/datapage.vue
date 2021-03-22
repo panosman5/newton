@@ -8,69 +8,91 @@
 
       <!-- Content -->
       <section id="content">
-        <form method="post" action="#">
+        <FormulateForm @submit="submitHandler" #default="{ hasErrors }">
           <div class="row gtr-uniform">
             <div class="col-6 col-12-xsmall">
-              <input
+              <FormulateInput
                 type="text"
-                name="name"
+                v-model="name"
                 id="name"
-                value=""
                 placeholder="Name*"
+                validation="required"
               />
             </div>
             <div class="col-6 col-12-xsmall">
-              <input
+              <FormulateInput
                 type="text"
-                name="surname"
+                v-model="surname"
                 id="surname"
-                value=""
                 placeholder="Surname*"
+                validation="required"
               />
             </div>
             <div class="col-12">
-              <input
+              <FormulateInput
                 type="email"
-                name="email"
+                v-model="email"
                 id="email"
-                value=""
                 placeholder="Email*"
+                validation="required|email"
               />
             </div>
             <div class="col-12">
-              <input
+              <FormulateInput
                 type="text"
-                name="institution"
+                v-model="institution"
                 id="institution"
-                value=""
                 placeholder="Institution*"
+                validation="required"
               />
             </div>
             <div class="col-12">
               <textarea
-                name="message"
+                v-model="message"
                 id="message"
-                placeholder="Enter your message*"
+                placeholder="Enter why you need access*"
                 rows="6"
+                validation="required"
               ></textarea>
             </div>
             <p><i>The fields with an asterisk are required fields</i></p>
             <div class="col-12">
               <ul class="actions special">
                 <li>
-                  <input type="submit" value="Request Access" class="primary" />
+                    <input type="submit" value="Request Access" class="primary" :disabled="hasErrors"  />
                 </li>
               </ul>
             </div>
           </div>
-        </form>
+        </FormulateForm>
+        <p>Name: {{name}}, Email: {{email}}, Text: {{ message }}</p>
       </section>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            name: '',
+            surname: '',
+            email: '',
+            institution: '',
+            message: ''
+        }
+    },
+    methods: {
+        submitHandler() {
+            console.log('Email: ', this.email)
+            console.log('Name: ', this.name)
+            console.log('Surname: ', this.surname)
+            console.log('Institution: ', this.institution)
+            console.log('Message ', this.message)
+        }
+    }
+   
+};
 </script>
 
 <style>
