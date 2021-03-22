@@ -54,6 +54,7 @@
                 rows="6"
                 validation="required"
               ></textarea>
+              <div v-if="messageError" class = "error"> {{ messageError }} </div>
             </div>
             <p><i>The fields with an asterisk are required fields</i></p>
             <div class="col-12">
@@ -79,16 +80,25 @@ export default {
             surname: '',
             email: '',
             institution: '',
-            message: ''
+            message: '',
+            messageError: ''
         }
     },
     methods: {
         submitHandler() {
+
+            this.messageError = this.message.lenght > 20 ?
+            '' : 'You have to enter a message'
+
+            if(!this.messageError){
             console.log('Email: ', this.email)
             console.log('Name: ', this.name)
             console.log('Surname: ', this.surname)
             console.log('Institution: ', this.institution)
             console.log('Message ', this.message)
+            }
+
+            
         }
     }
    
@@ -96,4 +106,11 @@ export default {
 </script>
 
 <style>
+.error{
+    color:red;
+    margin-top: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-style: italic;
+}
 </style>
