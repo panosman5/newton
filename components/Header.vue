@@ -12,8 +12,8 @@
             <li><NuxtLink to="/intro#Programme">Work Programme</NuxtLink></li>
           </ul>
         </li>
-        <li class="current"><NuxtLink to="/TechnicalDocuments">Technical Documents</NuxtLink></li>
-        <li class="current"><NuxtLink to="/Data">Data</NuxtLink></li>
+        <li class="current"><NuxtLink to="/technicaldocs">Technical Documents</NuxtLink></li>
+        <li class="current"><NuxtLink to="/datapage">Data</NuxtLink></li>
         <li>
           <NuxtLink to="/institutions">Participants</NuxtLink>
           <ul>
