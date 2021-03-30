@@ -66,7 +66,6 @@
             </div>
           </div>
         </FormulateForm>
-        <p>Name: {{name}}, Email: {{email}}, Text: {{ message }}</p>
       </section>
     </div>
   </div>

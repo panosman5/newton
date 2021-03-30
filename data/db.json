@@ -1,0 +1,33 @@
+{
+  "applicant": [
+    {
+      "id": "0",
+      "name": "Name",
+      "surname": "string",
+      "email": "string",
+      "institution": "institution",
+      "message": "strings"
+    },
+    {
+      "id": "Sby43Yh"
+    },
+    {
+      "name": "Panagiotis",
+      "surname": "Mandouvalos",
+      "email": "pmadou@noa.gr",
+      "institution": "National Observatory of Athens",
+      "message": "csdsfvdgf dbfdgbf fgbf dsfghdgbdfgb  fdbfdgbf",
+      "messageError": null,
+      "id": "oeyYxZb"
+    },
+    {
+      "name": "thanasis",
+      "surname": "georgiou",
+      "email": "ageorgiou@noa.gr",
+      "institution": "National Observatory of Athens",
+      "message": "GIATI DEN DIAVAZES NWRITERA TO VIVLIO RE REMALI??",
+      "messageError": null,
+      "id": "qevqbds"
+    }
+  ]
+}

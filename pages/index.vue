@@ -32,7 +32,7 @@
             </section>
             <section>
               <h3>Programme of Work</h3>
-              <a href="about.html#Programme" class="button">Learn More</a>
+              <a class="button"><NuxtLink to="intro#Programme">Learn More</NuxtLink></a>
             </section>
           </div>
         </div>

@@ -78,9 +78,9 @@
                                     <section class="feature">
                                         <span class="icon solid major fa-globe"></span>
                                         <h3>VirES</h3>
-                                        <p>VirES for Swarm is a highly interactive data manipulation and retrieval interface for the ESA Swarm constellation mission products.</p>
-                                        <a href="https://vires.services/" class="image fit"><img src='~assets/images/community/vires.png' alt="" /></a>
-                                        <br><a href="https://vires.services/" class="button">Visit VirES</a>
+                                        <p>VirES for Aeolus is a highly interactive data manipulation and retrieval interface for ESA's Aeolus mission products.</p>
+                                        <a href="https://aeolus.services/" class="image fit"><img src='~assets/images/community/vires2.png' alt="" /></a>
+                                        <br><a href="https://aeolus.services/" class="button">Visit VirES</a>
                                     </section>
                                 </div>
                             </div>
