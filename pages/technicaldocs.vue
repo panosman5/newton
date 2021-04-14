@@ -7,28 +7,26 @@
       </header>
 
       <div class="box alt">
-        <div class="row gtr-uniform gtr-200">
+        <!--<div class="row gtr-uniform gtr-200">--> 
           <div class="col-12-medium">
-            <section class="feature" style="width: 100%">
+           
+            <section class="feature" style="width=100%">
               <span class="icon solid major fa-file-pdf"></span>
 
               <span class="image right"
-                ><a
-                  href="#"
-                  target="_blank"
+                ><a href="#" target="_blank"
                   ><img
                     src="@/assets/images/conferences/tecdoc1.png"
                     alt="" /></a
               ></span>
               <h3>Science Requirement Baseline</h3>
-              <p style="text-align: justify">
-                
-              </p>
-              </section>
+              <p style="text-align: justify"></p>
+            </section>
           </div>
-        </div>
+          
+        <!--</div>-->
       </div>
-
+      <br><br><br><br>
       <header class="major">
         <p>Complete the form to request access to the Technical Documents</p>
       </header>
@@ -67,6 +65,18 @@
                 placeholder="Email*"
                 validation="required|email"
               />
+            </div>
+            <div class="col-12">
+            <FormulateInput
+              v-model="applicant.options"
+              :options="{
+                first: 'Science Requirement Baseline',
+                second: 'To be added soon',
+              }"
+              type="select"
+              placeholder="Select Technical Documents"
+              label="Select the Documents you want access to."
+            />
             </div>
             <div class="col-12">
               <FormulateInput
@@ -136,6 +146,7 @@ export default {
       console.log("Email: ", this.applicant.email);
       console.log("Name: ", this.applicant.name);
       console.log("Surname: ", this.applicant.surname);
+      console.log("Chosen Document: ", this.applicant.options);
       console.log("Institution: ", this.applicant.institution);
       console.log("Message ", this.applicant.message);
     },
