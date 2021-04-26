@@ -138,7 +138,7 @@ export default {
   methods: {
     submitHandler() {
       this.axios
-        .post("http://localhost:4000/applicant", this.applicant)
+        .post("http://localhost:3003/data", this.applicant)
         .then((response) => {
           console.warn(response);
         });
